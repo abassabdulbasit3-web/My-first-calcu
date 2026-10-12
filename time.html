@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="time"></h1>
+  <input id="hour">
+  <input id="minute">
+  <button onclick="box()">set alarm</button>
+  <div id="keh"></div>
+  <audio id="alarmSound" src="MUSIC.mp3"></audio>
+  <button onclick="stopAlarm()">stop alarm</button>
+  <script>
+      let alarmHour;
+      let alarmMinute;
+      const alarmSound = document.getElementById("alarmSound")
+    const displayTime = () =>{
+      let a = new Date()
+      let hours = a.getHours()
+      let minutes = a.getMinutes()
+      let seconds = a.getSeconds()
+      time.innerText = hours + ":" + minutes + ":" + seconds 
+      console.log(hours,alarmHour)
+      console.log(minutes,alarmMinute)
+      if (hours == alarmHour && minutes == alarmMinute && seconds == 0){
+        alarmSound.play()
+      }
+      }
+      const box = () => {
+        alarmHour = hour.value
+        alarmMinute = minute.value
+        keh.innerText = "Alarm set" + alarmHour + ":" + alarmMinute
+      }
+      setInterval(displayTime, 1000)
+      const stopAlarm =()=>{
+        let num1 = Math.floor(Math.random() * 10) 
+        let num2 = Math.floor(Math.random() * 10) 
+        let answer = num1 * num2
+        let userAnswer = prompt( num1 + "*" + num2 + "=")
+        if(Number(userAnswer) === answer ){
+        alarmSound.pause()
+        alarmSound.currentTime = 0
+        alert("correct Alarm stopped")
+        }else{
+          alert("wrong answer")
+        }
+      }
+  </script>
+</body>
+</html>

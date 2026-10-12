@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <input  id="box">
+  <button onclick="myfunc()">Start</button>
+  <script>
+    const myfunc = ()=>{
+      let number = box.value
+      let countdown = setInterval(function(){
+        number = number - 1
+        box.value = number
+        if(number <= 0){
+            clearInterval(countdown);
+        }
+
+      }, 2000)
+    }
+  </script>
+</body>
+</html>

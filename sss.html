@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="box">
+  <button onclick="principal()">click me</button>
+  <div id="result"></div>
+  <script>
+    const principal = () =>{
+      let a = box.value
+      let length = a.length
+      if(length ==0){
+        result.innerText = ("Enter something")
+      }
+      if (length >= 2){
+        let thirdlast = length -3 
+        let secondlast = length - 2
+        let last = length -1
+          result.innerText = a[thirdlast] + a[secondlast] + a[last]
+      }else{
+          result.innerText= "At least 3 characters"
+      }
+    }
+  </script>
+</body>
+</html>

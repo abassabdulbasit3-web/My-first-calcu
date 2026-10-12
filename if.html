@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="first">
+  <input id="second">
+  <button onclick="myfunc()">click me</button>
+  <div id="result"></div>
+  <script>
+  //   const myfunc = ()=>{
+  //   let a = Number(box.value);
+  //   if(a > 10){
+  //     alert("Hello")
+  //   }
+  // }
+
+  // const myfunc = ()=>{
+  //   let a = Number(box.value)
+  //   if(a >= 18){
+  //     result.innerText = "You are allow to vote"
+  //   }else{
+  //     result.innerText = "You are not allow to vote"
+  //   }
+  // }
+
+const myfunc = ()=>{
+  let a = Number(first.value)
+  let b = Number(second.value)
+  if(a>b){
+    result.innerText = "High"
+  }else{
+    result.innerText = "Low"
+  }
+}
+  </script>
+</body>
+</html>

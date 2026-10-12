@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="inn.css">
+</head>
+
+<body>
+  <table border="1" class="bold">
+    <tr>
+      <td id="one" onclick="display('one')"></td>
+      <td id="two" onclick="display('two')"></td>
+      <td id="three" onclick="display('three')"></td>
+    </tr>
+    <tr>
+      <td id="four" onclick="display('four')"></td>
+      <td id="five" onclick="display('five')"></td>
+      <td id="six" onclick="display('six')"></td>
+    </tr>
+    <tr>
+      <td id="seven" onclick="display('seven')"></td>
+      <td id="eight" onclick="display('eight')"></td>
+      <td id="nine" onclick="display('nine')"></td>
+    </tr>
+  </table>
+  <h1>First Player</h1>
+    <input id="player1" placeholder="Enter First Player name">
+    <div id="kesh"></div>
+  <h1>Second Player</h1>
+    <input id="player2" placeholder="Enter Second Player name">
+    <div id="message"></div>
+    <button onclick="myfunc()">clearAll</button>
+    <button onclick="startGame()" id="result">Start Game</button>
+    
+
+  <script>
+    let result = "X"
+    let gameover = false
+    let gameStarted = false
+    const startGame  = ()=>{
+      let player1 = document.getElementById("player1").value
+      let player2 = document.getElementById("player2").value
+      if(player1 === "" || player2 === ""){
+      message.innerText= "Enter both players name"
+      }else{
+      gameStarted = true;
+      gameover = false;
+      result = "X"
+      message.innerText = "Game started" 
+    }
+    }
+    const display = (value) => {
+      if (gameStarted === true){
+          let a = document.getElementById(value);
+      if (a.innerText === "") {
+      a.innerText = result
+      if (result === "X") {
+        result = "O"
+        } else {
+        result = "X"
+        }
+      }
+      
+      }
+    }
+
+    const box = () =>{
+      let one = document.getElementById ("one").innerText
+      let two = document.getElementById("two").innerText
+      let three = document.getElementById("three").innerText
+      let four = document.getElementById("four").innerText
+      let five = document.getElementById("five").innerText
+      let six = document.getElementById("six").innerText
+      let seven = document.getElementById("seven").innerText
+      let eight = document.getElementById("eight").innerText
+      let nine = document.getElementById("nine").innerText
+      if (one != "" && one == two && two == three){
+        alert(one + "Wins");
+        gameover = true;
+      }
+      else if (four != "" && four == five && five == six){
+        alert(four + "Wins");
+        gameover = true;
+      }
+      else if (seven != "" && seven == eight && eight == nine){
+        alert(seven + "Wins");
+        gameover = true;
+      }
+      else if (four != "" && four == five && five == six){
+        alert(four + "Wins");
+        gameover = true;
+      }
+      else if (one != "" && one == four && four == seven){
+        alert(one + "Wins");
+        gameover = true;
+      }
+      else if (two != "" && two == five && five == eight){
+        alert(two + "Wins");
+        gameover = true;
+      }
+      else if (three != "" && three == six && six == nine){
+        alert(three + "Wins");
+        gameover = true;
+      }
+      else if (one != "" && one == five && five == nine){
+        alert(one + "Wins");
+        gameover = true;
+      }
+      else if (three != "" && three == five && five == seven){
+        alert(three + "Wins");
+        gameover = true;
+      }
+      else if(one != "" && two != "" && three != "" &&  four != "" && five != "" && six != "" && seven != "" && eight != "" && nine != ""){
+        alert("draw")
+        gameover = false
+      }
+    }
+    const myfunc = () =>{
+      one.innerText = ""
+      two.innerText = ""
+      three.innerText = ""
+      four.innerText = ""
+      five.innerText = ""
+      six.innerText = ""
+      seven.innerText = ""
+      eight.innerText = ""
+      nine.innerText = ""
+    }
+    const answer = () =>{
+
+    }
+    
+    
+  </script>
+</body>
+
+</html>

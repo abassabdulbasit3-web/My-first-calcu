@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   <input id="inp">
+  <button onclick="myfunc()">click me</button>
+  <div id="display"></div>
+
+   <script>
+    const myfunc = ()=>{
+      let val = Number(inp.value)
+      if (val < 5){
+        display.innerText = "Toddler"
+      }
+      else if (val >=5 && val <=12 ){
+        display.innerText = "child"
+      }
+      else if (val >=13 && val <=19 ){
+        display.innerText = "Teenager"
+      }
+      else if (val >=20 && val <=40 ){
+        display.innerText = "Youth"
+      }
+      else if (val > 40 ){
+        display.innerText = "Adult"
+      } 
+      }
+    
+  </script>
+</body>
+</html>
