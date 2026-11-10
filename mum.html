@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<button onclick="myfunc()">click me</button>
+<body>
+  <script>
+    const myfunc = ()=>{
+    let nums = [20, 40, 80, 10, 40, 15]
+    for (let i=0; i < nums.length; i++){
+      if (nums[i] === 40 || i === 2){
+        continue;
+      }
+      console.log(nums[i])
+    }
+  }
+  </script>
+</body>
+</html>

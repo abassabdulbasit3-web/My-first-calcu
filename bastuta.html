@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="box1" placeholder="starting piont">
+  <input id="box2" placeholder="number to skip">
+  <input id="box3" placeholder="ending piont">
+  <button onclick=" result()"> click me</button>
+  <script>
+    const result =()=>{
+      let box1 = Number(document.getElementById("box1").value)
+      let box2 = Number(document.getElementById("box2").value)
+      let box3 = Number(document.getElementById("box3").value)
+      for (let a = box1; a <= box3; a++ ){
+        if (a % 5 != 0 || a == box2){
+        continue;
+      }
+
+      console.log(a);
+    }
+  }
+  </script>
+</body>
+</html>
